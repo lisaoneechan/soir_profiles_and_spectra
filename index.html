@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Архив профилей (PDF/PNG)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .folder {
+            background: white;
+            margin: 20px 0;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .folder h2 {
+            color: #2980b9;
+            margin-top: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .folder h2:hover {
+            color: #1abc9c;
+        }
+        .file-list {
+            margin-left: 25px;
+            display: block;
+        }
+        .file-list a {
+            display: inline-block;
+            margin: 5px 15px 5px 0;
+            padding: 5px 10px;
+            background: #ecf0f1;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+        .file-list a:hover {
+            background: #3498db;
+            color: white;
+        }
+        .toggle-icon {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 12px;
+        }
+    </style>
+    <script>
+        function toggleFolder(id) {
+            var list = document.getElementById('list-' + id);
+            var icon = document.getElementById('icon-' + id);
+            if (list.style.display === 'none') {
+                list.style.display = 'block';
+                icon.textContent = '▼';
+            } else {
+                list.style.display = 'none';
+                icon.textContent = '▶';
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>📄 Архив профилей (PDF/PNG)</h1>
+    <p>Сгенерировано: 2026-04-16 16:48:15</p>
+    <p>Найдено файлов: 2 (PDF/PNG)</p>
+
+    <div class="folder">
+        <h2 onclick="toggleFolder(0)">
+            <span class="toggle-icon" id="icon-0">▼</span>
+            📁 20061224_I01 (PDF: 1, PNG: 1)
+        </h2>
+        <div class="file-list" id="list-0">
+            <a href="20061224_I01/fitting_comparison_20061224_I01.pdf" target="_blank">📄 fitting_comparison_20061224_I01.pdf</a>
+            <a href="20061224_I01/orbit_17279_20061224_I01_with_VIRA.png" target="_blank">🖼️ orbit_17279_20061224_I01_with_VIRA.png</a>
+        </div>
+    </div>
+
+    <footer>
+        Сгенерировано автоматически. Для обновления списка запустите скрипт заново.
+    </footer>
+</div>
+</body>
+</html>
